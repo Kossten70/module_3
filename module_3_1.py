@@ -1,35 +1,37 @@
 calls = 0
-string = input("Введите строку :")
-list_to_search = [input("Введите список :")]
-# print (type (list_to_search))
-# print(list_to_search)
 
 
-# def count_calls():
-#     calls += 1
-#
-#
-# def string_info():
-#     lenght = len(string)
-#     hi = string.upper()
-#     low = string.lower()
-#     return lenght, hi, low
-#
-#
-# a = string_info()
-# print(a)
-# a = string_info()
-# print(a)
-# a = string_info()
-# print(a)
-#
-#
-#
-# def is_contains(string, list_to_search):
-
-    # if string in list_to_search:
-    #     print('True')
-    # else:
-    #     print('False')
+def count_calls():
+    global calls
+    calls += 1
 
 
+def string_info(string):  # Возвращает кортеж из длины стр, стр в верхнем и нижнем регистре.
+    count_calls()
+    lenght = len(string)
+    hi = string.upper()
+    low = string.lower()
+    return lenght, hi, low
+
+
+def is_contains(string, list_to_search):
+    count_calls()
+    string = string.lower()
+    for elem in list_to_search:
+        if elem.lower() == string:
+            return True
+    return False
+
+s = input ("Введите строку :")
+b = input ("Введите строку 2 :")
+print(string_info(s))
+print(string_info(b))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic']))  # No matches
+print(calls)
+
+# print(string_info('Capybara'))
+# print(string_info('Armageddon'))
+# print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))  # Urban ~ urBAN
+# print(is_contains('cycle', ['recycling', 'cyclic']))  # No matches
+# print(calls)
