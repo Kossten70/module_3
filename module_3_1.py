@@ -1,17 +1,35 @@
 calls = 0
 string = input("Введите строку :")
-print(string)
+list_to_search = [input("Введите список :")]
+# print (type (list_to_search))
+# print(list_to_search)
 
 
-# def count_calls(calls):
+# def count_calls():
 #     calls += 1
+#
+#
+# def string_info():
+#     lenght = len(string)
+#     hi = string.upper()
+#     low = string.lower()
+#     return lenght, hi, low
+#
+#
+# a = string_info()
+# print(a)
+# a = string_info()
+# print(a)
+# a = string_info()
+# print(a)
+#
+#
+#
+# def is_contains(string, list_to_search):
+
+    # if string in list_to_search:
+    #     print('True')
+    # else:
+    #     print('False')
 
 
-def string_info(string):
-    lenght = len(string)
-    hi = string.upper()
-    low = string.lower()
-    print(lenght, hi, low)
-
-
-string_info(string)
